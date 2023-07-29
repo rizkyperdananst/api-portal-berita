@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\API\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/post', [PostController::class, 'index']);
+Route::get('/post/{id}', [PostController::class, 'show']);
 
 // Route::get('/post', function() {
 //     return [
