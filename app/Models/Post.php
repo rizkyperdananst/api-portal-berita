@@ -15,4 +15,9 @@ class Post extends Model
         'news_content',
         'author',
     ];
+
+    public function writer()
+    {
+        return $this->belongsTo(User::class, 'author');
+    }
 }
